@@ -4,6 +4,9 @@ import AsteroidContext from '../AsteroidContext';
 export default function AsteroidInfo() {
   const { asteroidData } = useContext(AsteroidContext);
 
+  // Early return in case if no data found
+  if (!asteroidData) return <p>No Asteroid Data Found </p>;
+
   return (
     <>
       <div>
